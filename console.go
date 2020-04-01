@@ -322,19 +322,19 @@ func consoleDefaultFormatLevel(noColor bool) Formatter {
 		if ll, ok := i.(string); ok {
 			switch ll {
 			case "trace":
-				l = colorize("TRC", colorMagenta, noColor)
+				l = colorize("TRACE", colorMagenta, noColor)
 			case "debug":
-				l = colorize("DBG", colorYellow, noColor)
+				l = colorize("DEBUG", colorYellow, noColor)
 			case "info":
-				l = colorize("INF", colorGreen, noColor)
+				l = colorize("INFO ", colorGreen, noColor)
 			case "warn":
-				l = colorize("WRN", colorRed, noColor)
+				l = colorize("WARN ", colorRed, noColor)
 			case "error":
-				l = colorize(colorize("ERR", colorRed, noColor), colorBold, noColor)
+				l = colorize(colorize("ERROR", colorRed, noColor), colorBold, noColor)
 			case "fatal":
-				l = colorize(colorize("FTL", colorRed, noColor), colorBold, noColor)
+				l = colorize(colorize("FATAL", colorRed, noColor), colorBold, noColor)
 			case "panic":
-				l = colorize(colorize("PNC", colorRed, noColor), colorBold, noColor)
+				l = colorize(colorize("PANIC", colorRed, noColor), colorBold, noColor)
 			default:
 				l = colorize("???", colorBold, noColor)
 			}
